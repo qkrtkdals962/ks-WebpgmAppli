@@ -5,7 +5,7 @@ h1.textContent = "자기소개페이지";
 body.appendChild(h1);
 
 let img = document.createElement("img");
-img.src = "내사진.jpg";
+img.src = "내사진.png";
 img.alt = "프로필 이미지";
 img.style.height = "400px";
 img.style.width = "300px";
