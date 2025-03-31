@@ -1,70 +1,40 @@
-# Getting Started with Create React App
+# 컴포넌트의 생명주기,state
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### 컴포넌트의 생명주기
 
-## Available Scripts
+1. 함수형 컴포넌트의 훅
+   - React에서 함수형 컴포넌트는 클래스형 컴포넌트처럼 생명주기 메서드를 사용하지 않고 **훅(Hook)** 을 사용하여 생명주기를 관리함
+   - 가장 중요한 훅은 **useEffect()** 이고 **useEffect()** 는 함수형 컴포넌트에서 컴포넌트의 생명주기를 제어하는 데 사용됨
+2. 함수형 컴포넌트의 생명주기
+   1. 마운트(mounting)
+      - 컴포넌트가 렌더링될 때 실행됨
+      - useEffect()는 기본적으로 컴포넌트가 마운트된 후 실행
+   2. 업데이트(Updating)
+      - 컴포넌트의 **상태(state)**나 **속성(props)**이 변경되면, 해당 컴포넌트는 재렌더링을 실행함
+      - useEffect()는 상태나 속성이 변경될 때마다 실행
+   3. 언마운트(Unmounting)
+      - 컴포넌트가 DOM에서 제거되기 직전에, 정리(cleanup) 작업을 할 수 있음
+      - useEffect 훅에서 정리 함수를 반환하면, 언마운트 시 그 함수가 호출함
 
-In the project directory, you can run:
+### state,props
 
-### `npm start`
+1. state
+   - 컴포넌트의 **상태(state)** 를 의미함
+   - **변경 가능한 데이터**를 저장하고 관리
+   - 컴포넌트의 상태가 변경되면, 재렌더링이 발생하여 UI를 업데이트함
+   - 상태 변경을 위해서는 setState() 메서드를 이용하여 변경
+3. props
+   - 부모 컴포넌트가 자식 컴포넌트로 전달하는 **읽기 전용 데이터**
+   - Props는 자식 컴포넌트에서 수정할 수 없고 오직 **부모 컴포넌트에 전달**만 받을 수 있음
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
