@@ -23,10 +23,10 @@
       - 3. 세번째로 isFoodSelected는 앞의 randomFood에서 골라진 음식이 저장되는 순간 **false**가 **true**로 바뀌며 **저장된 음식을 출력**하는 역할입니다.
         
 결국 selectCategories에서 체크박스를 누르지 않는다면 고르기 버튼을 눌러도 음식이 저장이 되지 않아 isFoodSelected가 true로 바뀌지 못하여 출력하지 않습니다.
-'''jsx
-const [selectedCategories, setSelectedCategories] = useState([]);  // 선택된 카테고리 목록
-const [randomFood, setRandomFood] = useState("");                  // 랜덤으로 선택된 음식
-const [isFoodSelected, setIsFoodSelected] = useState(false);       // 음식이 선택됐는지 여부
+  ```jsx
+  const [selectedCategories, setSelectedCategories] = useState([]);  // 선택된 카테고리 목록
+  const [randomFood, setRandomFood] = useState("");                  // 랜덤으로 선택된 음식
+  const [isFoodSelected, setIsFoodSelected] = useState(false);       // 음식이 선택됐는지 여부
 
 5. **삼항 연산자** (`? :`)
    - **삼항 연산자**는 **조건부 연산자**로, **`조건 ? 참일 때 : 거짓일 때`** 형식으로 사용됩니다. 이 연산자는 특정 조건에 따라 다른 값을 반환하거나 실행할 때 유용합니다.
