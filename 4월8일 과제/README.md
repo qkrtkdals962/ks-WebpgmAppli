@@ -21,7 +21,7 @@
    - 예를 들어, **`ResultDisplay`** 컴포넌트에서 사용된 삼항 연산자는 **`isFoodSelected`** 값에 따라 다른 메시지를 출력합니다.
    
    예시)
-   ```jsx
+   ```ResultDisplay.jsx
    {isFoodSelected ? (
      <h2>추천 음식: {result}</h2> // 추천된 음식이 있을 때
    ) : (
