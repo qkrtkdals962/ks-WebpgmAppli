@@ -18,11 +18,11 @@
       - 2. 부모 컴포넌트인 **`App.js`**에 버튼의 이름인 "고르기"를 입력했고 입력된 이름이 **`RandomButton.jsx`**에 `props`로 전달되도록 만들었습니다.
       - 2. 부모 컴포넌트인 **`App.js`**에 누가 제작한지 나오도록 제 소속과 이름을 적었고, **`Footer.jsx`**를 만들고 뒤에 제작을 붙여 누구든지 이름과 소속을 적으면 어떤 소속의 누가 제작했는지 알 수 있게 만들었습니다.
    - **`state`**: 컴포넌트 내에서 **동적인 데이터**를 관리하는 역할을 합니다.
-      - 1. selectCategories는 카테고리 체크박스를 눌렀을때 체크박스의 **상태**를 바꿔주는 역할입니다.
-      - 2. 두번째로 randomFood는 사용자가 **고르기**버튼을 눌렀을때 FoodList에서, selectedCategories에 체크된 항목들만 모아 그 안에서 **랜덤으로 하나 골라서 저장**하는 역할입니다.
-      - 3. 세번째로 isFoodSelected는 앞의 randomFood에서 골라진 음식이 저장되는 순간 **false**가 **true**로 바뀌며 **저장된 음식을 출력**하는 역할입니다.
+      - 1. **selectCategories**는 카테고리 체크박스를 눌렀을때 체크박스의 **상태**를 바꿔주는 역할입니다.
+      - 2. 두번째로 **randomFood**는 사용자가 **고르기**버튼을 눌렀을때 **FoodList**에서, **selectedCategories**에 체크된 항목들만 모아 그 안에서 **랜덤으로 하나 골라서 저장**하는 역할입니다.
+      - 3. 세번째로 **isFoodSelected**는 앞의 **randomFood**에서 골라진 음식이 저장되는 순간 **false**가 **true**로 바뀌며 **저장된 음식을 출력**하는 역할입니다.
         
-결국 selectCategories에서 체크박스를 누르지 않는다면 고르기 버튼을 눌러도 음식이 저장이 되지 않아 isFoodSelected가 true로 바뀌지 못하여 출력하지 않습니다.
+결국 **selectCategories**에서 체크박스를 누르지 않는다면 고르기 버튼을 눌러도 **randomFood**에서 음식이 저장이 되지 않아 **isFoodSelected**가 true로 바뀌지 못하여 출력하지 않습니다.
   ```jsx
   const [selectedCategories, setSelectedCategories] = useState([]);  // 선택된 카테고리 목록
   const [randomFood, setRandomFood] = useState("");                  // 랜덤으로 선택된 음식
@@ -41,3 +41,6 @@
      <h2>음식을 선택해 주세요!</h2> // 음식이 선택되지 않았을 때
    )}
    ```
+
+###### 결과
+src항목의 App.js항목, food폴더를 확인하면 과제를 볼수있습니다.
