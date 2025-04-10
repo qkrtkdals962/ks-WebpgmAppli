@@ -3,6 +3,7 @@ import CategorySelector from "./food/CategorySelector";
 import RandomButton from "./food/RandomButton";
 import ResultDisplay from "./food/ResultDisplay";
 import foodList from "./food/foodList";
+import Footer from "./food/Footer";
 
 const App = () => {
   const categories = [
@@ -49,8 +50,12 @@ const App = () => {
         categories={categories}
         onCategoryChange={handleCategoryChange}
       />
-      <RandomButton onClick={handleRandomClick} />
+      <RandomButton selection="고르기" onClick={handleRandomClick} />
       <ResultDisplay result={randomFood} isFoodSelected={isFoodSelected} />
+      <br></br>
+      <br></br>
+      <br></br>
+      <Footer message="경성대학교 21학번 박상민" />
     </div>
   );
 };

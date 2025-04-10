@@ -1,8 +1,8 @@
 import React from 'react';
 
-const RandomButton = ({ onClick }) => {
+const RandomButton = ({ selection, onClick }) => {
   return (
-    <button onClick={onClick}>고르기!</button>
+    <button onClick={onClick}>{selection}</button>
   );
 };
 
