@@ -27,8 +27,9 @@
   const [selectedCategories, setSelectedCategories] = useState([]);  // 선택된 카테고리 목록
   const [randomFood, setRandomFood] = useState("");                  // 랜덤으로 선택된 음식
   const [isFoodSelected, setIsFoodSelected] = useState(false);       // 음식이 선택됐는지 여부
+  ```
 
-5. **삼항 연산자** (`? :`)
+2. **삼항 연산자** (`? :`)
    - **삼항 연산자**는 **조건부 연산자**로, **`조건 ? 참일 때 : 거짓일 때`** 형식으로 사용됩니다. 이 연산자는 특정 조건에 따라 다른 값을 반환하거나 실행할 때 유용합니다.
    - 예를 들어, **`ResultDisplay`** 컴포넌트에서 사용된 삼항 연산자는 **`isFoodSelected`** 값에 따라 다른 메시지를 출력합니다.
    
@@ -39,3 +40,4 @@
    ) : (
      <h2>음식을 선택해 주세요!</h2> // 음식이 선택되지 않았을 때
    )}
+   ```
